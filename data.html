@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+
+<head>
+    <style>
+        body {
+            background-color: #ffffff;
+            margin: 0px;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        #lottie {
+            background-color: #ffffff;
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+            transform: translate3d(0, 0, 0);
+            text-align: center;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie.js" integrity="sha256-j5t8yIha0IKq9Oajlw+yBTISHC7DMh1AVIC3v1Ka6S8=" crossorigin="anonymous"></script>
+    <script src="./animationData.js"></script>
+
+    <div id="lottie"></div>
+
+    <script>
+        var params = {
+            container: document.getElementById('lottie'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            animationData: animationDataNEW
+        };
+
+        var anim;
+
+        anim = lottie.loadAnimation(params);
+
+        anim.playSegments([0, 12], true);
+        //getElementById('lottie')
+        document.querySelector("#gun1").addEventListener('mouseover', function() {
+            //if (anim.currentFrame < 15) {
+
+            anim.playSegments([25, 60], true);
+
+        })
+
+        document.querySelector("#ptn").addEventListener('mouseover', function() {
+            //if (anim.currentFrame < 15) {
+
+            anim.playSegments([171, 230], true);
+        })
+
+        document.querySelector("#missile1").addEventListener('mouseover', function() {
+            //if (anim.currentFrame < 15) {
+
+            anim.playSegments([60, 95], true);
+        })
+
+        document.querySelector("#missile1_2").addEventListener('mouseover', function() {
+            //if (anim.currentFrame < 15) {
+
+            anim.playSegments([60, 95], true);
+        })
+    </script>
+</body>
+
+</html>
